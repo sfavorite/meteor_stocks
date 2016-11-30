@@ -1,0 +1,57 @@
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role='navigation'>
+       <div class="container-fluid">
+          <div class="navbar-header">
+             <a class="navbar-brand" href="/">Favorite Consulting</a>
+
+             <button type="button" class="navbar-toggle" aria-expanded="false" data-toggle="collapse" data-target="#myNavbar">
+             <span class="sr-only">Toggle navigation</span>
+             <p style="color: white">Menu</p>
+
+          </button>
+          </div>
+          <!-- navbar-header -->
+
+          <div class="navbar-collapse collapse" id="myNavbar">
+             <ul class="nav navbar-nav">
+                <li class=''>
+                   <a href="#" data-pjax='#main'>Home</a>
+                </li>
+                <li class=''><a href="#" data-pjax='#main'>Services</a></li>
+                <li class=''><a href="#" data-pjax='#main'>About</a></li>
+                <li class=''><a href="#" data-pjax='#main'>Contact</a></li>
+                <li class=''><a href="#" data-pjax='#main'>Non-profits</a></li>
+
+
+             </ul>
+             <ul class='nav navbar-nav navbar-right'>
+
+                <li class="loginButtons"><a href='#' data-pjax='#main'><i class="fa fa-sign-in fa-log" aria-hidden="true"></i> {{> loginButtons}}</a></li>
+
+             </ul>
+          </div>
+
+       </div>
+    </nav>
+    <div class="content">
+        {{#if currentUser}}
+            <form class="add-stock">
+                <input type="text" name="symbol" placeholder="Search for a symbol..."/>
+            </form>
+
+            <ul>
+                {{#each stocks}}
+                    {{> stock}}
+                {{/each}}
+            </ul>
+            <div class="fav-filter">
+                Filter favorites
+            </div>
+
+            {{#with selectedStock}}
+                {{> stockDetail}}
+            {{/with}}
+        {{/if}}
+    </div>
+
+</body>

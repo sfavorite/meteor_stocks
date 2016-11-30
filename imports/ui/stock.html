@@ -1,0 +1,10 @@
+<template name="stock">
+    <li class="stockListing">
+        <span class="listSymbol">{{name}}</span>
+        <span class="numSelected"> (followers: {{count}})</span>
+        <div class="options">
+            <button type="button" class="toggle-favorite" aria-label="Favorite stock"><span aria-hidden="true">&times;</span></button>
+            <button type="button" class="delete" aria-label="Delete this stock symbol from your list"><span aria-hidden="true">&times;</span></button>
+        </div>
+    </li>
+</template>

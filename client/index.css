@@ -1,0 +1,12 @@
+/* CSS declarations go here */
+
+/* Make the Sign in font yellow */ 
+.dropdown-toggle {
+    color: yellow;
+}
+
+/* Move content so it is below the nav bar */
+.content {
+   margin: 80px 80px 0px 80px;
+
+}
