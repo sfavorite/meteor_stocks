@@ -17,11 +17,6 @@
                 <li class=''>
                    <a href="#" data-pjax='#main'>Home</a>
                 </li>
-                <li class=''><a href="#" data-pjax='#main'>Services</a></li>
-                <li class=''><a href="#" data-pjax='#main'>About</a></li>
-                <li class=''><a href="#" data-pjax='#main'>Contact</a></li>
-                <li class=''><a href="#" data-pjax='#main'>Non-profits</a></li>
-
 
              </ul>
              <ul class='nav navbar-nav navbar-right'>
@@ -39,11 +34,16 @@
                 <input type="text" name="symbol" placeholder="Search for a symbol..."/>
             </form>
 
+            <div class="row">
+                <div class="col-md-6">
+
             <ul>
                 {{#each stocks}}
                     {{> stock}}
                 {{/each}}
             </ul>
+        </div></div>
+        
             <div class="fav-filter">
                 Filter favorites
             </div>

@@ -15,10 +15,11 @@ Meteor.methods({
         start.setDate(start.getDate() - 365);
         console.log('Start: ' + start);
 
-        return YahooFinance.historical({
+        data = YahooFinance.historical({
             symbol: symbol,
             from: start,
             to: end
         });
+        return data;
     }
 })

@@ -1,6 +1,6 @@
 /* CSS declarations go here */
 
-/* Make the Sign in font yellow */ 
+/* Make the Sign in font yellow */
 .dropdown-toggle {
     color: yellow;
 }
@@ -9,4 +9,22 @@
 .content {
    margin: 80px 80px 0px 80px;
 
+}
+
+/* Horizontal divider */
+.h-divider {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 1px;
+    width: 100%;
+    border-top: 1px solid gray;
+}
+
+/* Vertical divider */
+.v-divider {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 1px;
+    height: 100%;
+    border-left: 1px solid gray;
 }

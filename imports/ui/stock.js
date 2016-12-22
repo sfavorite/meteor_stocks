@@ -13,7 +13,7 @@ Template.stock.events({
         var name = this.name;
         var symbol = this.symbol;
         Meteor.call("getData", this.symbol, function(error, result) {
-            if (result) {
+            if (result.length > 0) {
                 var currentPrice = result[result.length-1].close.toFixed(2);
 
                 SelectedStock.set({
@@ -22,8 +22,8 @@ Template.stock.events({
                     data: result,
                     price: currentPrice
                 });
-                console.log('SelectedStock');
-                console.log(SelectedStock.get());
+            } else {
+                console.log('No data for this stock');
             }
         });
     }

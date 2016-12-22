@@ -5,7 +5,7 @@ SelectedStock = new ReactiveVar(null);
 
 function createChart() {
     var stock = SelectedStock.get();
-
+    console.log(stock);
     $('#container-area').highcharts('StockChart', {
        series: [{
          type: 'line',

@@ -1,10 +1,12 @@
 <template name="stock">
-    <li class="stockListing">
-        <span class="listSymbol">{{name}}</span>
-        <span class="numSelected"> (followers: {{count}})</span>
-        <div class="options">
-            <button type="button" class="toggle-favorite" aria-label="Favorite stock"><span aria-hidden="true">&times;</span></button>
-            <button type="button" class="delete" aria-label="Delete this stock symbol from your list"><span aria-hidden="true">&times;</span></button>
-        </div>
-    </li>
+        <li class="stockListing list-group-item">
+            <span class="listSymbol"><h4>{{name}}</h4></span>
+            <p>Followers: <span class="numSelected badge">{{count}}</span></p>
+        </li>
+
+            <div class="options">
+                <button type="button" class="toggle-favorite btn btn-primary" aria-label="Favorite stock">Favorite</button>
+                <button type="button" class="delete btn btn-danger" aria-label="Delete this stock symbol from your list">Delete</button>
+                <button type="button" class="stockListing btn btn-info" aria-label="Graph this stocks performance">Graph</button>
+            </div>
 </template>
